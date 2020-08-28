@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,6 +33,7 @@ import { ProductCreateComponent } from './components/product/product-create/prod
     MatListModule,
     BrowserModule,
     MatCardModule,
+    MatButtonModule,
     AppRoutingModule,
     MatToolbarModule,
     MatSidenavModule,
