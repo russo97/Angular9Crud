@@ -15,6 +15,7 @@ import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './views/home/home.component';
 import { ProductsCrudComponent } from './views/products-crud/products-crud.component';
+import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ProductsCrudComponent } from './views/products-crud/products-crud.compo
     FooterComponent,
     NavComponent,
     HomeComponent,
-    ProductsCrudComponent
+    ProductsCrudComponent,
+    ProductCreateComponent
   ],
   imports: [
     MatListModule,
