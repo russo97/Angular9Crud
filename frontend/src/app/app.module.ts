@@ -21,6 +21,10 @@ import { ProductCreateComponent } from './components/product/product-create/prod
 
 import { HttpClientModule } from '@angular/common/http';
 
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,15 +36,18 @@ import { HttpClientModule } from '@angular/common/http';
     ProductCreateComponent
   ],
   imports: [
+    FormsModule,
     MatListModule,
     BrowserModule,
     MatCardModule,
+    MatInputModule,
     MatButtonModule,
     AppRoutingModule,
     MatToolbarModule,
     MatSidenavModule,
     HttpClientModule,
     MatSnackBarModule,
+    MatFormFieldModule,
     BrowserAnimationsModule
   ],
   providers: [],
