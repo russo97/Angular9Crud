@@ -4,21 +4,6 @@
       "id": 1,
       "price": 1980,
       "name": "Geladeira"
-    },
-    {
-      "name": "",
-      "price": null,
-      "id": 2
-    },
-    {
-      "name": "",
-      "price": null,
-      "id": 3
-    },
-    {
-      "name": "okok",
-      "price": "12",
-      "id": 4
     }
   ]
 }
