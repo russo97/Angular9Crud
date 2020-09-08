@@ -10,7 +10,10 @@ import { Product } from '../product.model';
 })
 export class ProductUpdateComponent implements OnInit {
 
-  product: Product
+  product: Product = {
+    name: '',
+    price: 0
+  };
 
   constructor(
     private router: Router,
