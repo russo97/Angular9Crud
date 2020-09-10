@@ -1,1 +1,15 @@
-<p>product-delete works!</p>
+<mat-card>
+    <mat-card-title>Confirma exclusão do produto?</mat-card-title>
+    
+    <button (click)="deletarProduto()" color="warn" mat-raised-button>
+        Sim
+    </button>
+    
+    <button (click)="cancel()" mat-raised-button>
+        Não
+    </button>
+
+    <button (click)="modificarInformacoes()" mat-raised-button>
+        Desejo apenas alterar informações
+    </button>
+</mat-card>
