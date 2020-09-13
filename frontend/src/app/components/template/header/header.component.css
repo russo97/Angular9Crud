@@ -4,6 +4,7 @@
 }
 
 .header a {
+    color: #333;
     display: flex;
     align-items: center;
     text-decoration: none;
