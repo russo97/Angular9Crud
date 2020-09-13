@@ -3,7 +3,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { HttpClient } from '@angular/common/http';
 
 import { Product } from './product.model';
-import { Observable } from 'rxjs';
+import { Observable, EMPTY } from 'rxjs';
+
+import { map, catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -17,16 +19,26 @@ export class ProductService {
     private snackBar: MatSnackBar
   ) { }
 
-  showMessage (msg: string): void {
+  showMessage (msg: string, isError: boolean = false): void {
     this.snackBar.open(msg, '×', {
       duration: 3000,
       verticalPosition: "top",
-      horizontalPosition: "right"
+      horizontalPosition: "right",
+      panelClass: isError ? ['msg-error'] : ['msg-success']
     });
   }
 
+  errorHandler (e: any): Observable<any> {
+    this.showMessage('Impossível completar solicitação', true);
+
+    return EMPTY;
+  }
+
   create(product: Product): Observable<Product> {
-    return this.http.post<Product>(this.baseURL, product);
+    return this.http.post<Product>(this.baseURL, product).pipe(
+      map(obj => obj),
+      catchError(e => this.errorHandler(e))
+    );
   }
 
   read(): Observable<Product[]> {
